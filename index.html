@@ -1,0 +1,243 @@
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>学生进出学校核验</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="./fx_files/weui.css">
+    <link rel="stylesheet" href="./fx_files/weuix.css">
+    <link href="./fx_files/layui.css" rel="stylesheet">
+    <script src="./fx_files/zepto.min.js"></script>
+    <script src="./fx_files/qrcode.js"></script>
+    <script type="text/javascript">
+      // 生成随机数
+      function getRandomNumber() {
+        var number = Math.floor(Math.random() * 20 + 10);
+        var number1 = number.toString();
+        var div1 = document.getElementById("number");
+        div1.innerHTML = number1;
+      }
+        setTimeout("getRandomNumber()",200);
+        //得到时间并写入div
+        function getDate() {
+            //获取当前时间
+            var date = new Date();
+            //格式化为本地时间格式
+            var date1 = date.toLocaleString();
+            //获取div
+            var div1 = document.getElementById("times");
+            //将时间写入div
+            div1.innerHTML = date1;
+        }
+        //使用定时器每秒向div写入当前时间
+        setInterval("getDate()", 1000);
+    </script>
+    <style type="text/css">
+    @keyframes scaleDraw {
+        /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+        0% {
+          transform: scale(1);
+          /*开始为原始大小*/
+        }
+        25% {
+          transform: scale(1.1);
+          /*放大1.1倍*/
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+      }
+      .zp {
+        -webkit-animation-name: scaleDraw;
+        /*关键帧名称*/
+        -webkit-animation-timing-function: ease-in-out;
+        /*动画的速度曲线*/
+        -webkit-animation-iteration-count: infinite;
+        /*动画播放的次数*/
+        -webkit-animation-duration: 4s;
+        /*动画所花费的时间*/
+      }
+
+      .bUtonadaLij {
+        width: 218rpx;
+        height: 80rpx;
+        /*background: #FFF;*/
+        border-radius: 40rpx;
+        line-height: 80rpx;
+        text-align: center;
+        font-size: 28rpx;
+        color: #006a4c;
+        border: 2rpx solid #006a4c;
+        font-weight: bold;
+        -webkit-animation-name: scaleDraw;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 3s;
+      }
+
+      @keyframes scaleDraw {
+        0% {
+          transform: scale(1);
+        }
+
+        25% {
+          transform: scale(0.8);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+
+        75% {
+          transform: scale(0.8);
+        }
+      }
+        .whiteFont {
+            color: white;
+        }
+
+        .yellow_bg {
+            background-color: #CDCD00
+        }
+
+        .green_bg {
+            background-color: #00FF00
+        }
+
+        .red_bg {
+            background-color: #FF0000
+        }
+
+        body {
+            background: url("cssjs/imgs/bg.jpg") repeat;
+            background-size: 100%;
+        }
+
+        .cl0 {
+            z-index: 9999;
+            background: url("cssjs/imgs/3_01.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl1 {
+            z-index: 9999;
+            margin-top: -20px;
+            background: url("cssjs/imgs/3_02.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl2 {
+            z-index: 9999;
+            text-align: center;
+            background: url("cssjs/imgs/3_03.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl3 {
+            height: 200px;
+            margin-top: -40px;
+            background: url("cssjs/imgs/3_04.jpg") repeat;
+            background-size: 100%;
+        }
+
+        .cl4 {
+            background: url("cssjs/imgs/3_05.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl5 {
+            background: url("cssjs/imgs/3_06.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl6_yellow {
+            height: 40px;
+            background: url("static/cssjs/imgs/3_07_y.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl6_red {
+            height: 40px;
+            background: url("cssjs/imgs/1_07.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl6_green {
+            height: 40px;
+            background: url("cssjs/imgs/2_07.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl6_grey {
+            height: 40px;
+            background: url("cssjs/imgs/4_07.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        /*.cl6_purple {*/
+        /*    height: 40px;*/
+        /*    background: url("static/cssjs/imgs/purple.png") no-repeat;*/
+        /*    background-size: 100%;*/
+        /*}*/
+
+        .cl7 {
+            background: url("cssjs/imgs/3_08.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .cl8 {
+            height: 60px;
+            background: url("cssjs/imgs/3_10_1.png") no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="page-hd cl0"></div>
+<div class="page-hd cl1">
+</div>
+<div class="page-hd cl2">
+    <p style="font-size: 30px; font-family: STHeiti; font-weight: bold;" align="center">陈宇豪</p>
+</div>
+<div class="page-hd cl3" style=" text-align: center;float:none;">
+    <p style="font-size: 20px; text-align:center;">202134261089</p>
+    <p style="font-size: 16px; text-align:center;">信息科学技术学院</p>
+    <p style="font-size: 16px; text-align:center;">
+    </p>
+    <div id="qr" class="tcenter" style="padding: 10px;height:170px;">
+        <a href="https://icas.jnu.edu.cn/cas/logout?service=https://webapi4.jnu.edu.cn/xgfxmcs/index.php?url=" target="_blank">
+            <img class="zp" width="110px" height="150px" src=cssjs/imgs/kongbai.jpeg>
+        </a>
+
+    </div>
+
+    <p style="font-size: 16px; text-align:center;">
+    </p>
+    <p style="font-size: 16px; font-weight: 200;" align="center"></p>
+</div>
+<div class="page-hd cl4">
+    <p style="font-size: 20px; font-weight:bold;" align="center"><span id='times'></span></p>
+</div>
+
+<div class="page-hd cl5">
+        <p style="font-size: 20px;font-weight: bold;text-align: center;margin-top: -30px;"id="number"></p>
+</div>
+
+
+<div id="colorDIV" class="page-hd cl6 cl6_grey" permit="grey">
+    <p style=" color:#fff;   font-size: 25px;  font-weight: 200; line-height: 25px;" align="center" class="bUtonadaLij">予以通行</p>
+    <p style=" color:#fff;   font-size: 15px;  font-weight: 200; line-height: 30px;" align="center">随机码：m0dEfP</p>
+</div>
+
+
+<div class="page-hd cl7"></div>
+<div class="page-hd cl8"></div>
+
+
+</body>
+</html>
